@@ -15,6 +15,7 @@ def lambda_handler(event, context):
     json_data = response['Body'].read().decode('utf-8')
         
         # Convert JSON string to DataFrame
+    print("*******Dataframe********")
     df = pd.read_json(json_data)
         
     return df
