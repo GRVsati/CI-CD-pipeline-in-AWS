@@ -17,6 +17,9 @@ def lambda_handler(event, context):
         # Convert JSON string to DataFrame
     print("*******Dataframe********")
     df = pd.read_json(json_data)
-        
-    return df
+    
+    #filter the records that have status delivered
+    delivered_data = df[df['status']== 'delivered']
+       
+    return delivered_data
 
