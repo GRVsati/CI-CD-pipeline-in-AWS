@@ -18,5 +18,5 @@ phases:
       - echo "Uploading to S3..."
       - aws s3 cp deployment_package.zip s3://lambda-buildszip/
       - echo "Updating Lambda function via S3..."
-      - aws lambda update-function-code --function-name json-read-from-S3 --s3-bucket lambda-builds-zip --s3-key deployment_package.zip
-      - echo "Deployment complete!"
+      - aws lambda update-function-code --function-name json-read-from-S3 --s3-bucket lambda-buildszip --s3-key deployment_package.zip
+      - echo "Deployment completed!"
